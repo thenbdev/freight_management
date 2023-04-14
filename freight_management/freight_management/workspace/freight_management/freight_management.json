@@ -10,7 +10,6 @@
  "hide_custom": 0,
  "icon": "",
  "idx": 0,
- "is_default": 0,
  "is_standard": 1,
  "label": "Freight Management",
  "links": [
@@ -102,5 +101,7 @@
    "link_to": "Track Shipping Order",
    "type": "DocType"
   }
- ]
+ ],
+ "public": 1,
+ "title": "Freight Management"
 }
