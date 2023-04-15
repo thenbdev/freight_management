@@ -2,13 +2,13 @@
  "category": "Modules",
  "charts": [],
  "creation": "2022-06-24 12:05:29.000153",
+ "content": "[{\"type\": \"header\",\"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\": 12}},{\"type\": \"shortcut\",\"data\": {\"shortcut_name\": \"Direct Shipping\",\"col\": 3}},{\"type\": \"shortcut\",\"data\": {\"shortcut_name\": \"Custom Clearance\",\"col\": 3}},{\"type\": \"shortcut\",\"data\": {\"shortcut_name\": \"Custom Revision\",\"col\": 3}},{\"type\": \"shortcut\",\"data\": {\"shortcut_name\": \"Track Shipping Order\",\"col\": 3}},{\"type\": \"spacer\",\"data\": {\"col\": 12}},{\"type\": \"header\",\"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Reports & Masters</b></span>\",\"col\": 12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Configurations\",\"col\":4}}]",
  "developer_mode_only": 0,
  "disable_user_customization": 0,
  "docstatus": 0,
  "doctype": "Workspace",
  "extends_another_page": 0,
  "hide_custom": 0,
- "icon": "",
  "idx": 0,
  "is_standard": 1,
  "label": "Freight Management",
@@ -99,9 +99,10 @@
    "doc_view": "List",
    "label": "Track Shipping Order",
    "link_to": "Track Shipping Order",
-   "type": "DocType"
+   "type": "Report"
   }
  ],
  "public": 1,
+ "sequence_id": 25.0,
  "title": "Freight Management"
 }
