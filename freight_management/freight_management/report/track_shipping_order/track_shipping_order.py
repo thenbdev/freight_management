@@ -25,16 +25,17 @@ def get_columns():
 		_("ETA") + ":Link/Department:120",
 		_("ETC") + ":Link/Designation:120",
 		_("Status") + "::60",
-		_("Company") + ":Link/Company:120",
+		# _("Company") + ":Link/Company:120",
 	]
 
 
 def get_employees(filters):
 	conditions = get_conditions(filters)
 	return frappe.db.sql(
-		"""select name, employee_name, date_of_birth,
-	branch, department, designation,
-	gender, company from tabEmployee where status = 'Active' %s"""
+		# tabFreight Order Line
+		"""select 'Vessel Name', loading_port, 'Cargo',
+	'Qty', order_date, expected_receive_date, 'Status'
+	from `tabDirect Shipping` %s"""
 		% conditions,
 		as_list=1,
 	)
