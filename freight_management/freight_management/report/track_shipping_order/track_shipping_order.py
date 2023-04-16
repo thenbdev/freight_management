@@ -18,12 +18,13 @@ def execute(filters=None):
 
 def get_columns():
 	return [
-		_("Vessel Name") + ":Link/Employee:120",
-		_("Terminal") + ":Data:200",
-		_("Cargo") + ":Date:100",
-		_("Quantity") + ":Link/Branch:120",
-		_("ETA") + ":Link/Department:120",
-		_("ETC") + ":Link/Designation:120",
+		_("Code") + ":Link/Direct Shipping:120",
+		_("Vessel Name") + ":Link/Vessels:120",
+		_("Terminal") + ":Link/Freight Location:200",
+		_("Cargo") + "::100",
+		_("Quantity") + "::120",
+		_("ETA") + ":Date:120",
+		_("ETC") + ":Date:120",
 		_("Status") + "::60",
 		# _("Company") + ":Link/Company:120",
 	]
@@ -33,8 +34,8 @@ def get_employees(filters):
 	conditions = get_conditions(filters)
 	return frappe.db.sql(
 		# tabFreight Order Line
-		"""select name, loading_port, name1',
-	'Qty', order_date, expected_receive_date, docstatus
+		"""select name, name1, loading_port,
+	'Cargo', 'Qty', order_date, expected_receive_date, docstatus
 	from `tabDirect Shipping` %s"""
 		% conditions,
 		as_list=1,
