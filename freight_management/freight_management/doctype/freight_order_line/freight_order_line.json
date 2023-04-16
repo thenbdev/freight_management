@@ -34,7 +34,7 @@
    "fieldname": "pricing",
    "fieldtype": "Link",
    "label": "Pricing",
-   "options": "Pricing  List"
+   "options": "Pricing List"
   },
   {
    "depends_on": "eval:doc.billing_on == \"Weight\"",
