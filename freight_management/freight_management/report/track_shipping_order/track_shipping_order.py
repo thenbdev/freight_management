@@ -33,8 +33,8 @@ def get_employees(filters):
 	conditions = get_conditions(filters)
 	return frappe.db.sql(
 		# tabFreight Order Line
-		"""select 'Vessel Name', loading_port, 'Cargo',
-	'Qty', order_date, expected_receive_date, 'Status'
+		"""select name, loading_port, name1',
+	'Qty', order_date, expected_receive_date, docstatus
 	from `tabDirect Shipping` %s"""
 		% conditions,
 		as_list=1,
