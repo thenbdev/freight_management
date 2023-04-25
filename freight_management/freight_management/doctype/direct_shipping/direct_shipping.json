@@ -1,13 +1,12 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "DS.#####",
  "creation": "2022-06-24 11:27:50.452700",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name1",
+  "vessel",
   "direction",
   "customer",
   "consignee",
@@ -34,13 +33,12 @@
  ],
  "fields": [
   {
-   "fieldname": "name1",
+   "fieldname": "vessel",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Vessel Name",
    "options": "Vessels",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "direction",
@@ -74,7 +72,8 @@
   {
    "fieldname": "order_date",
    "fieldtype": "Date",
-   "label": "Order Date"
+   "label": "Order Date",
+   "reqd": 1
   },
   {
    "fieldname": "company",
@@ -145,7 +144,8 @@
     "fieldname": "expected_date_berthing",
     "fieldtype": "Date",
     "in_list_view": 1,
-    "label": "Expected Date of Berthing"
+    "label": "Expected Date of Berthing",
+    "reqd": 1
   },
   {
     "fieldname": "actual_date_berthing",
@@ -157,7 +157,8 @@
    "fieldname": "expected_receive_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Expected Receive Date"
+   "label": "Expected Receive Date",
+   "reqd": 1
   },
   {
    "fieldname": "actual_receive_date",
