@@ -15,7 +15,6 @@
  "links": [
   {
    "hidden": 0,
-   "is_query_report": 0,
    "label": "Configurations",
    "link_to": "",
    "link_type": "DocType",
@@ -24,7 +23,6 @@
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
    "label": "Freight Location",
    "link_to": "Freight Location",
    "link_type": "DocType",
@@ -33,7 +31,6 @@
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
    "label": "Vessels",
    "link_to": "Vessels",
    "link_type": "DocType",
@@ -42,7 +39,6 @@
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
    "label": "Airlines",
    "link_to": "Airlines",
    "link_type": "DocType",
@@ -51,7 +47,6 @@
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
    "label": "Containers",
    "link_to": "Containers",
    "link_type": "DocType",
@@ -59,8 +54,6 @@
    "type": "Link"
   },
   {
-   "hidden": 1,
-   "is_query_report": 0,
    "label": "Pricing List",
    "link_to": "Pricing List",
    "link_type": "DocType",

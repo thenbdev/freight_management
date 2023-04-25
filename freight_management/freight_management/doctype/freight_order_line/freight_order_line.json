@@ -8,7 +8,8 @@
  "field_order": [
   "container",
   "items",
-  "cost"
+  "quantity",
+  "billing_on"
  ],
  "fields": [
   {
@@ -26,10 +27,17 @@
    "options": "Item"
   },
   {
-   "fieldname": "cost",
-   "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Cost"
+    "fieldname": "quantity",
+    "fieldtype": "Float",
+    "in_list_view": 1,
+    "label": "Quantity"
+  },
+  {
+    "fieldname": "billing_on",
+    "fieldtype": "Select",
+    "in_list_view": 1,
+    "label": "Billing On",
+    "options": "Volume\nWeight"
   }
  ],
  "index_web_pages_for_search": 1,

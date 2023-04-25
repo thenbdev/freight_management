@@ -24,6 +24,7 @@ def get_columns():
 		_("Cargo") + "::100",
 		_("Quantity") + "::120",
 		_("ETA") + ":Date:120",
+		_("ETB") + ":Date:120",
 		_("ETC") + ":Date:120",
 		_("Status") + "::60",
 		# _("Company") + ":Link/Company:120",
@@ -35,7 +36,7 @@ def get_employees(filters):
 	return frappe.db.sql(
 		# tabFreight Order Line
 		"""select name, name1, loading_port,
-	'Cargo', 'Qty', order_date, expected_receive_date, workflow_state
+	'Cargo', 'Qty', order_date, actual_date_berthing, actual_receive_date, workflow_state
 	from `tabDirect Shipping` %s"""
 		% conditions,
 		as_list=1,

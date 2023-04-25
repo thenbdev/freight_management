@@ -35,7 +35,7 @@
  "fields": [
   {
    "fieldname": "name1",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Vessel Name",
    "options": "Vessels",
@@ -69,7 +69,7 @@
    "fieldname": "transport",
    "fieldtype": "Select",
    "label": "Transport",
-   "options": "Land\nOcean\nAir"
+   "options": "Ocean\nLand\nAir"
   },
   {
    "fieldname": "order_date",
@@ -144,21 +144,25 @@
   {
     "fieldname": "expected_date_berthing",
     "fieldtype": "Date",
+    "in_list_view": 1,
     "label": "Expected Date of Berthing"
   },
   {
     "fieldname": "actual_date_berthing",
     "fieldtype": "Date",
+    "in_list_view": 1,
     "label": "Actual Date of Berthing"
   },
   {
    "fieldname": "expected_receive_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Expected Receive Date"
   },
   {
    "fieldname": "actual_receive_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Actual Receive Date"
   },
   {
