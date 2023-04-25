@@ -59,7 +59,7 @@
    "type": "Link"
   },
   {
-   "hidden": 0,
+   "hidden": 1,
    "is_query_report": 0,
    "label": "Pricing List",
    "link_to": "Pricing List",
@@ -84,12 +84,14 @@
    "type": "DocType"
   },
   {
+   "hidden": 1,
    "doc_view": "List",
    "label": "Custom Clearance",
    "link_to": "Custom Clearance",
    "type": "DocType"
   },
   {
+   "hidden": 1,
    "doc_view": "List",
    "label": "Custom Revision",
    "link_to": "Custom Revision",

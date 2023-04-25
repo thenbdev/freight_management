@@ -59,7 +59,6 @@
    "read_only": 1
   },
   {
-   "depends_on": "eval: workflow_state = \"Revision\"||workflow_state = \"Approved\"",
    "fieldname": "revision_reason",
    "fieldtype": "Data",
    "in_list_view": 1,

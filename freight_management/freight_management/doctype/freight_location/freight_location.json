@@ -10,7 +10,6 @@
   "name1",
   "code",
   "country",
-  "state",
   "land",
   "ocean",
   "air"
@@ -36,12 +35,6 @@
    "fieldtype": "Link",
    "label": "Country",
    "options": "Country"
-  },
-  {
-   "fieldname": "state",
-   "fieldtype": "Select",
-   "label": "State",
-   "options": "S1\nS2"
   },
   {
    "default": "0",

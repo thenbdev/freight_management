@@ -13,7 +13,6 @@
   "consignee",
   "column_break_5",
   "transport",
-  "land_shipping",
   "order_date",
   "company",
   "general_section",
@@ -27,6 +26,8 @@
   "freight_order_line",
   "amended_from",
   "section_break_20",
+  "expected_date_berthing",
+  "actual_date_berthing",
   "expected_receive_date",
   "actual_receive_date",
   "party"
@@ -36,7 +37,8 @@
    "fieldname": "name1",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Name",
+   "label": "Vessel Name",
+   "options": "Vessels",
    "reqd": 1,
    "unique": 1
   },
@@ -68,12 +70,6 @@
    "fieldtype": "Select",
    "label": "Transport",
    "options": "Land\nOcean\nAir"
-  },
-  {
-   "fieldname": "land_shipping",
-   "fieldtype": "Select",
-   "label": "Land Shipping",
-   "options": "FTL\nLTL"
   },
   {
    "fieldname": "order_date",
@@ -144,6 +140,16 @@
   {
    "fieldname": "section_break_20",
    "fieldtype": "Section Break"
+  },
+  {
+    "fieldname": "expected_date_berthing",
+    "fieldtype": "Date",
+    "label": "Expected Date of Berthing"
+  },
+  {
+    "fieldname": "actual_date_berthing",
+    "fieldtype": "Date",
+    "label": "Actual Date of Berthing"
   },
   {
    "fieldname": "expected_receive_date",

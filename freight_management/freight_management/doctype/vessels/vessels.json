@@ -39,7 +39,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Transport ",
-   "options": "Land\nOcean\nAir"
+   "options": "Ocean\nLand\nAir"
   },
   {
    "fieldname": "notes",

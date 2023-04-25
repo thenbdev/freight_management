@@ -9,12 +9,12 @@ class DirectShipping(Document):
 	pass
 
 def validate(self,cdt):
-	for d in self.get('freight_order_line'):
-		if d.pricing:
-			if d.billing_on == "Volume":
-				d.sale_price = d.volume * d.price
-			else:
-				d.sale_price = d.gross_weight * d.price
+	# for d in self.get('freight_order_line'):
+		# if d.pricing:
+		# 	if d.billing_on == "Volume":
+		# 		d.sale_price = d.volume * d.price
+		# 	else:
+		# 		d.sale_price = d.gross_weight * d.price
 	# test_d = frappe.db.get_value("Track Shipping Order",{'name1':self.name},'name')
 	# if test_d:
 	# 	test_doc = frappe.get_doc("Track Shipping Order",test_d)
@@ -33,3 +33,4 @@ def validate(self,cdt):
 	# 		"status":self.workflow_state
 	# 		})
 	# 	vals.save()
+	pass

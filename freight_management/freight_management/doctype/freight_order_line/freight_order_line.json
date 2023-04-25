@@ -8,12 +8,7 @@
  "field_order": [
   "container",
   "items",
-  "pricing",
-  "billing_on",
-  "gross_weight",
-  "volume",
-  "price",
-  "sale_price"
+  "cost"
  ],
  "fields": [
   {
@@ -31,45 +26,10 @@
    "options": "Item"
   },
   {
-   "fieldname": "pricing",
-   "fieldtype": "Link",
-   "label": "Pricing",
-   "options": "Pricing List"
-  },
-  {
-   "depends_on": "eval:doc.billing_on == \"Weight\"",
-   "fetch_from": "pricing.weight_price",
-   "fetch_if_empty": 1,
-   "fieldname": "gross_weight",
-   "fieldtype": "Float",
-   "label": "Gross Weight"
-  },
-  {
-   "depends_on": "eval:doc.billing_on == \"Volume\"",
-   "fetch_from": "pricing.volume_price",
-   "fetch_if_empty": 1,
-   "fieldname": "volume",
-   "fieldtype": "Float",
-   "label": "Volume"
-  },
-  {
-   "fieldname": "price",
-   "fieldtype": "Float",
-   "label": "Price"
-  },
-  {
-   "fieldname": "sale_price",
+   "fieldname": "cost",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Sale Price",
-   "read_only": 1
-  },
-  {
-   "fieldname": "billing_on",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Billing On",
-   "options": "Volume\nWeight"
+   "label": "Cost"
   }
  ],
  "index_web_pages_for_search": 1,
