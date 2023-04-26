@@ -2,11 +2,11 @@ from . import __version__ as app_version
 
 app_name = "freight_management"
 app_title = "Freight Management"
-app_publisher = "Solufy"
+app_publisher = "theNB"
 app_description = "This module allows you to manage all freight operations (Air, Ocean, and Land)"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
-app_email = "contact@solufy.in"
+app_email = "dev@thenb.in"
 app_license = "MIT"
 
 # Includes in <head>

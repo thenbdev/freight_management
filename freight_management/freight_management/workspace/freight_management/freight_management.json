@@ -16,17 +16,34 @@
   {
    "hidden": 0,
    "label": "Configurations",
-   "link_to": "",
    "link_type": "DocType",
-   "onboard": 0,
    "type": "Card Break"
+  },
+  {
+    "label": "Direct Shipping",
+    "link_to": "Direct Shipping",
+    "link_type": "DocType",
+    "type": "Link"
+  },
+  {
+    "hidden": 1,
+    "label": "Custom Clearance",
+    "link_to": "Custom Clearance",
+    "link_type": "DocType",
+    "type": "Link"
+  },
+  {
+    "hidden": 1,
+    "label": "Custom Revision",
+    "link_to": "Custom Revision",
+    "link_type": "DocType",
+    "type": "Link"
   },
   {
    "hidden": 0,
    "label": "Freight Location",
    "link_to": "Freight Location",
    "link_type": "DocType",
-   "onboard": 0,
    "type": "Link"
   },
   {
@@ -34,15 +51,13 @@
    "label": "Vessels",
    "link_to": "Vessels",
    "link_type": "DocType",
-   "onboard": 0,
    "type": "Link"
   },
   {
-   "hidden": 0,
+   "hidden": 1,
    "label": "Airlines",
    "link_to": "Airlines",
    "link_type": "DocType",
-   "onboard": 0,
    "type": "Link"
   },
   {
@@ -50,16 +65,22 @@
    "label": "Containers",
    "link_to": "Containers",
    "link_type": "DocType",
-   "onboard": 0,
    "type": "Link"
   },
   {
+   "hidden": 1,
    "label": "Pricing List",
    "link_to": "Pricing List",
    "link_type": "DocType",
-   "onboard": 0,
    "type": "Link"
-  }
+  },
+  {
+    "dependencies": "Direct Shipping, Vessels, Freight Location, Item",
+    "doc_view": "List",
+    "label": "Track Shipping Order",
+    "link_to": "Track Shipping Order",
+    "type": "Report"
+   }
  ],
  "modified": "2022-06-29 11:49:37.785872",
  "modified_by": "Administrator",
