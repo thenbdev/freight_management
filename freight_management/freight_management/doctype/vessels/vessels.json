@@ -1,26 +1,19 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:vessel_name",
  "creation": "2022-06-24 12:20:46.931275",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name",
+  "vessel_name",
   "code",
   "country",
   "transport",
   "notes"
  ],
  "fields": [
-  {
-   "fieldname": "name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Name",
-   "reqd": 1,
-   "unique": 1
-  },
   {
    "fieldname": "code",
    "fieldtype": "Data",
@@ -39,20 +32,30 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Transport ",
-   "options": "Ocean\nLand\nAir"
+   "options": "Ocean\nLand\nAir",
+   "reqd": 1
   },
   {
    "fieldname": "notes",
    "fieldtype": "Long Text",
    "label": "Notes"
+  },
+  {
+   "fieldname": "vessel_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vessel Name",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-06-29 16:27:18.830308",
+ "modified": "2023-04-26 11:44:50.641728",
  "modified_by": "Administrator",
  "module": "Freight Management",
  "name": "Vessels",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -68,6 +71,9 @@
    "write": 1
   }
  ],
+ "quick_entry": 1,
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
 }
