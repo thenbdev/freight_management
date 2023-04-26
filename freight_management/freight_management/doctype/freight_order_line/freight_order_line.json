@@ -9,13 +9,14 @@
   "container",
   "items",
   "quantity",
+  "discharge_rate",
+  "remain_qty",
   "billing_on"
  ],
  "fields": [
   {
    "fieldname": "container",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Container",
    "options": "Containers"
   },
@@ -31,21 +32,35 @@
    "fieldname": "quantity",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Quantity",
+   "label": "Total qty",
+   "non_negative": 1,
    "reqd": 1
   },
   {
    "fieldname": "billing_on",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Billing On",
    "options": "Volume\nWeight"
+  },
+  {
+   "fieldname": "discharge_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Discharge/Load Rate (per 24 hours)",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "remain_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Remain qty",
+   "non_negative": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-04-26 11:46:25.101335",
+ "modified": "2023-04-26 17:08:50.633122",
  "modified_by": "Administrator",
  "module": "Freight Management",
  "name": "Freight Order Line",

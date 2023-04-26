@@ -91,7 +91,7 @@
    "type": "DocType"
   },
   {
-   "dependencies": "Direct Shipping, Vessels, Freight Location",
+   "dependencies": "Direct Shipping, Vessels, Freight Location, Item",
    "doc_view": "List",
    "label": "Track Shipping Order",
    "link_to": "Track Shipping Order",

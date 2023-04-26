@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:vessel",
+ "autoname": "format:{vessel}-{order_date}",
  "creation": "2022-06-24 11:27:50.452700",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -9,27 +9,30 @@
  "field_order": [
   "vessel",
   "direction",
+  "transport",
+  "column_break_0",
   "customer",
   "consignee",
-  "column_break_5",
-  "transport",
+  "section_break_1",
   "order_date",
+  "expected_date_berthing",
+  "expected_receive_date",
+  "column_break_1",
   "company",
+  "actual_date_berthing",
+  "actual_receive_date",
   "general_section",
-  "loading_port",
-  "discharging_port",
   "voyage_no",
-  "column_break_14",
   "operator",
   "agent",
+  "column_break_14",
+  "loading_port",
+  "achor_number",
+  "discharging_port",
   "section_break_17",
   "freight_order_line",
   "amended_from",
   "section_break_20",
-  "expected_date_berthing",
-  "actual_date_berthing",
-  "expected_receive_date",
-  "actual_receive_date",
   "party"
  ],
  "fields": [
@@ -41,8 +44,7 @@
    "in_list_view": 1,
    "label": "Vessel Name",
    "options": "Vessels",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "direction",
@@ -55,17 +57,14 @@
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
-   "options": "Customer"
+   "options": "Customer",
+   "reqd": 1
   },
   {
    "fieldname": "consignee",
    "fieldtype": "Link",
    "label": "Consignee",
    "options": "Customer"
-  },
-  {
-   "fieldname": "column_break_5",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "transport",
@@ -77,6 +76,7 @@
    "fieldname": "order_date",
    "fieldtype": "Date",
    "label": "Order Date",
+   "no_copy": 1,
    "reqd": 1
   },
   {
@@ -105,7 +105,8 @@
   {
    "fieldname": "voyage_no",
    "fieldtype": "Int",
-   "label": "Voyage No"
+   "label": "Voyage Number",
+   "no_copy": 1
   },
   {
    "fieldname": "column_break_14",
@@ -149,6 +150,7 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Expected Date of Berthing",
+   "no_copy": 1,
    "reqd": 1
   },
   {
@@ -157,13 +159,15 @@
    "fieldname": "actual_date_berthing",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Actual Date of Berthing"
+   "label": "Actual Date of Berthing",
+   "no_copy": 1
   },
   {
    "fieldname": "expected_receive_date",
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Expected Receive Date",
+   "no_copy": 1,
    "reqd": 1
   },
   {
@@ -172,21 +176,39 @@
    "fieldname": "actual_receive_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Actual Receive Date"
+   "label": "Actual Receive Date",
+   "no_copy": 1
   },
   {
    "fieldname": "party",
    "fieldtype": "Data",
    "label": "Party"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "achor_number",
+   "fieldtype": "Data",
+   "label": "Anchor Number"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-26 11:54:08.406224",
+ "modified": "2023-04-26 17:11:27.735920",
  "modified_by": "Administrator",
  "module": "Freight Management",
  "name": "Direct Shipping",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

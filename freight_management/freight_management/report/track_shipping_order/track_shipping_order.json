@@ -1,22 +1,24 @@
 {
  "add_total_row": 0,
- "columns": [
-  {
-   "fieldname": "Vessel Name",
-   "fieldtype": "Link",
-   "label": "vessel_name",
-   "width": 120
-  }
- ],
+ "columns": [],
  "creation": "2021-12-05 19:47:18.332319",
  "disabled": 0,
  "docstatus": 0,
  "doctype": "Report",
- "filters": [],
+ "filters": [
+  {
+   "fieldname": "Status",
+   "fieldtype": "Select",
+   "label": "status",
+   "mandatory": 0,
+   "options": "Scheduled\nOverdue Arrival\nArrived\nUnloading\nOverdue Departure\nDelivered\nUnknown",
+   "wildcard_filter": 0
+  }
+ ],
  "idx": 0,
  "is_standard": "Yes",
  "letter_head": "Test",
- "modified": "2023-04-26 12:19:18.415631",
+ "modified": "2023-04-26 15:43:49.459508",
  "modified_by": "Administrator",
  "module": "Freight Management",
  "name": "Track Shipping Order",
