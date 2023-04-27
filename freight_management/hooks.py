@@ -12,10 +12,10 @@ app_license = "MIT"
 # Includes in <head>
 # ------------------
 
-fixtures = [{
-		"doctype": "Workflow"
-		},
-	]
+# fixtures = [{
+# 		"doctype": "Workflow"
+# 		},
+# 	]
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/freight_management/css/freight_management.css"
@@ -110,13 +110,6 @@ fixtures = [{
 #	}
 # }
 
-doc_events = {
-  'Custom Clearance': {
-        'validate': [
-            'freight_management.freight_management.doctype.custom_clearance.custom_clearance.validate'
-        ],
-  },
-}
 
 # Scheduled Tasks
 # ---------------

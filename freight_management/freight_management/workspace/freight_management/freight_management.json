@@ -2,7 +2,7 @@
  "category": "Modules",
  "charts": [],
  "creation": "2022-06-24 12:05:29.000153",
- "content": "[{\"type\": \"header\",\"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\": 12}},{\"type\": \"shortcut\",\"data\": {\"shortcut_name\": \"Direct Shipping\",\"col\": 3}},{\"type\": \"shortcut\",\"data\": {\"shortcut_name\": \"Custom Clearance\",\"col\": 3}},{\"type\": \"shortcut\",\"data\": {\"shortcut_name\": \"Custom Revision\",\"col\": 3}},{\"type\": \"shortcut\",\"data\": {\"shortcut_name\": \"Track Shipping Order\",\"col\": 3}},{\"type\": \"spacer\",\"data\": {\"col\": 12}},{\"type\": \"header\",\"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Reports & Masters</b></span>\",\"col\": 12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Configurations\",\"col\":4}}]",
+ "content": "[{\"type\": \"header\",\"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\": 12}},{\"type\": \"shortcut\",\"data\": {\"shortcut_name\": \"Direct Shipping\",\"col\": 3}},{\"type\": \"shortcut\",\"data\": {\"shortcut_name\": \"Track Shipping Order\",\"col\": 3}},{\"type\": \"spacer\",\"data\": {\"col\": 12}},{\"type\": \"header\",\"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Reports & Masters</b></span>\",\"col\": 12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Configurations\",\"col\":4}}]",
  "developer_mode_only": 0,
  "disable_user_customization": 0,
  "docstatus": 0,
@@ -74,20 +74,6 @@
    "doc_view": "List",
    "label": "Direct Shipping",
    "link_to": "Direct Shipping",
-   "type": "DocType"
-  },
-  {
-   "hidden": 1,
-   "doc_view": "List",
-   "label": "Custom Clearance",
-   "link_to": "Custom Clearance",
-   "type": "DocType"
-  },
-  {
-   "hidden": 1,
-   "doc_view": "List",
-   "label": "Custom Revision",
-   "link_to": "Custom Revision",
    "type": "DocType"
   },
   {
