@@ -64,7 +64,7 @@ fixtures = [{
 
 # before_install = "freight_management.install.before_install"
 # after_install = "freight_management.install.after_install"
-# after_sync = "freight_management.sync.after_sync"
+after_sync = "freight_management.sync.after_sync"
 
 # Uninstallation
 # ------------
@@ -111,6 +111,11 @@ fixtures = [{
 # }
 
 doc_events = {
+    'Direct Shipping': {
+        'validate': [
+            'freight_management.freight_management.doctype.direct_shipping.direct_shipping.validate'
+        ],
+  },
   'Custom Clearance': {
         'validate': [
             'freight_management.freight_management.doctype.custom_clearance.custom_clearance.validate'
