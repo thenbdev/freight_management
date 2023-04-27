@@ -3,7 +3,7 @@ from frappe.model.document import Document
 class DirectShipping(Document):
 	pass
 
-def validate(self,cdt):
+# def validate(self,cdt):
 	# for d in self.get('freight_order_line'):
 		# if d.pricing:
 		# 	if d.billing_on == "Volume":
@@ -28,4 +28,4 @@ def validate(self,cdt):
 	# 		"status":self.workflow_state
 	# 		})
 	# 	vals.save()
-	pass
+	# pass
