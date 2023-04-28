@@ -25,7 +25,7 @@ def execute(filters=None):
 	return columns, report_data
 
 
-def render_cell(doc, fieldname, row):
+def render_cell(row, column):
     print(f"fieldname is {fieldname}")
     print(f"row is {row}")
     
