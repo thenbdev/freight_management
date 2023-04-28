@@ -56,7 +56,7 @@ def get_columns():
 	columns = [
 		{
 			"label": _("Anchor No"),
-			"fieldname": "achor_number",
+			"fieldname": "anchor_number",
 			"fieldtype": "Data",
 			"width": 60
 		},
@@ -68,8 +68,15 @@ def get_columns():
 			"width": 120
 		},
 		{
-			"label": _("Terminal"),
+			"label": _("Loading Port"),
 			"fieldname": "loading_port",
+			"fieldtype": "Link",
+			"options": "Freight Location",
+			"width": 120
+		},
+		{
+			"label": _("Destination Port"),
+			"fieldname": "discharging_port",
 			"fieldtype": "Link",
 			"options": "Freight Location",
 			"width": 120
@@ -89,19 +96,19 @@ def get_columns():
 		},
 		{
 			"label": _("ETA"),
-			"fieldname": "ETA",
+			"fieldname": "eta",
 			"fieldtype": "Datetime",
 			"width": 120
 		},
 		{
 			"label": _("ETB"),
-			"fieldname": "ETB",
+			"fieldname": "etb",
 			"fieldtype": "Datetime",
 			"width": 120
 		},
 		{
 			"label": _("ETC"),
-			"fieldname": "ETC",
+			"fieldname": "etc",
 			"fieldtype": "Datetime",
 			"width": 120
 		},
@@ -169,7 +176,7 @@ def get_data(filters):
 
 	query = """
 		SELECT 
-			DS.achor_number, DS.vessel, DS.loading_port,
+			DS.achor_number, DS.vessel, DS.loading_port, DS.discharging_port,
 			FOL.items as 'cargo', FOL.quantity, 
 			DS.order_date as ETA, 
 			COALESCE(DS.actual_date_berthing, DS.expected_date_berthing) as ETB,
@@ -187,7 +194,7 @@ def get_data(filters):
 				WHEN DS.actual_receive_date IS NOT NULL THEN 'Delivered'
 				ELSE 'Unknown'
 			END AS status,
-			''
+			'' as remarks
 
 			FROM `tabFreight Order Line` FOL
 			RIGHT JOIN `tabDirect Shipping` DS
@@ -195,7 +202,7 @@ def get_data(filters):
 	"""+where_condition+" order by loading_port"
 
 	result = frappe.db.sql(query, as_list=1)
-	return [r for r in result]
+	return [result]
 
 
 def get_conditions(filters):
