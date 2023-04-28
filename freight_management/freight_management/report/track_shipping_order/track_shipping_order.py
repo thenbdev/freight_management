@@ -13,9 +13,17 @@ def execute(filters=None):
 
 	columns = get_columns()
 	data = get_data(filters)
+	
+	data_dict = []
+	for row in data:
+		row_dict = {}
+		for column in columns:
+			row_dict[column['fieldname']] = row[columns.index(column)]
+		data_dict.append(row_dict)
+
 
 	report_data = []
-	for row in data:
+	for row in data_dict:
 		report_row = []
 		for column in columns:
 			cell_value = render_cell(row, column)
@@ -26,8 +34,8 @@ def execute(filters=None):
 
 
 def render_cell(row, column):
-	if column.fieldname == "Status":
-		value = cstr(row.get(column.fieldname))
+	if column["fieldname"] == "status":
+		value = cstr(row.get(column["fieldname"]))
 		colors = {
 			'Unknown': 'grey',
 			'Scheduled': 'orange',
@@ -40,27 +48,111 @@ def render_cell(row, column):
 		color = colors.get(value, '')
 		if color:
 			return f"<div style='color: {color};'>{value}</div>"
-	return row.get(column.fieldname)
+
+	return row.get(column["fieldname"])
 
 
 def get_columns():
-	return [
-		_("Anchor No") + "::60",
-		_("Vessel Name") + ":Link/Vessels:120",
-		_("Terminal") + ":Link/Freight Location:120",
-		_("Cargo") + ":Link/Item:100",
-		_("Quantity") + "::80",
-		_("ETA") + ":Datetime:120",
-		_("ETB") + ":Datetime:120",
-		_("ETC") + ":Datetime:120",
-		_("24hr Disch/load rate") + ":Float:100",
-		_("Qty (Remain)") + ":Float:80",
-		_("Receiver") + ":Cusomer:120",
-		_("Exporters") + ":Cusomer:120",
-		_("Status") + "::120",
-		_("Remarks") + "::120"
-		# _("Company") + ":Link/Company:120",
+	columns = [
+		{
+			"label": _("Anchor No"),
+			"fieldname": "achor_number",
+			"fieldtype": "Data",
+			"width": 60
+		},
+		{
+			"label": _("Vessel Name"),
+			"fieldname": "vessel",
+			"fieldtype": "Link",
+			"options": "Vessels",
+			"width": 120
+		},
+		{
+			"label": _("Terminal"),
+			"fieldname": "loading_port",
+			"fieldtype": "Link",
+			"options": "Freight Location",
+			"width": 120
+		},
+		{
+			"label": _("Cargo"),
+			"fieldname": "cargo",
+			"fieldtype": "Link",
+			"options": "Item",
+			"width": 100
+		},
+		{
+			"label": _("Quantity"),
+			"fieldname": "quantity",
+			"fieldtype": "Data",
+			"width": 80
+		},
+		{
+			"label": _("ETA"),
+			"fieldname": "ETA",
+			"fieldtype": "Datetime",
+			"width": 120
+		},
+		{
+			"label": _("ETB"),
+			"fieldname": "ETB",
+			"fieldtype": "Datetime",
+			"width": 120
+		},
+		{
+			"label": _("ETC"),
+			"fieldname": "ETC",
+			"fieldtype": "Datetime",
+			"width": 120
+		},
+		{
+			 "label": _("24hr Disch/load rate"),
+			 "fieldname": "discharge_rate",
+			 "fieldtype": "Float",
+			 "width": 100
+		 },
+		{
+			"label": _("Qty (Remain)"),
+			"fieldname": "remain_qty",
+			"fieldtype": "Float",
+			"width": 80
+		},
+		{
+			"label": _("Receiver"),
+			"fieldname": "customer",
+			"fieldtype": "Link",
+			"options": "Customer",
+			"width": 120
+		},
+		{
+			"label": _("Exporters"),
+			"fieldname": "consignee",
+			"fieldtype": "Link",
+			"options": "Customer",
+			"width": 120
+		},
+		{
+			"label": _("Status"),
+			"fieldname": "status",
+			"fieldtype": "Data",
+			"width": 120
+		},
+		{
+			"label": _("Remarks"),
+			"fieldname": "remarks",
+			"fieldtype": "Data",
+			"width": 120
+		}
+		# {
+		# 	"label": _("Company"),
+		# 	"fieldname": "company",
+		# 	"fieldtype": "Link",
+		# 	"options": "Company",
+		# 	"width": 120
+		# }
 	]
+	
+	return columns
 
 
 def get_data(filters):
