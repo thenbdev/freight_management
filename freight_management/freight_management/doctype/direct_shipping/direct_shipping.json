@@ -2,7 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:{vessel}-{order_date}",
+ "autoname": "format:{vessel} on {order_date}",
  "creation": "2022-06-24 11:27:50.452700",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -45,6 +45,7 @@
    "fieldtype": "Link",
    "label": "Vessel Name",
    "options": "Vessels",
+   "in_list_view": 0,
    "reqd": 1
   },
   {
@@ -83,6 +84,7 @@
    "fieldname": "order_date",
    "fieldtype": "Datetime",
    "label": "Order Date",
+   "in_list_view": 0,
    "no_copy": 1,
    "reqd": 1
   },
