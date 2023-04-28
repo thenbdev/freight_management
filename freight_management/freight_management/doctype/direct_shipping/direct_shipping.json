@@ -67,14 +67,14 @@
   },
   {
    "fieldname": "customer",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Customer",
    "options": "Customer",
-   "reqd": 1
+   "reqd": 0
   },
   {
    "fieldname": "consignee",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Consignee",
    "options": "Customer"
   },

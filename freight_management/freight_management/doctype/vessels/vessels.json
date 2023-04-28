@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "allow_import": 1,
  "autoname": "field:vessel_name",
  "creation": "2022-06-24 12:20:46.931275",
  "doctype": "DocType",
