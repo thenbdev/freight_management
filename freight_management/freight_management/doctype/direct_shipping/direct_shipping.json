@@ -1,7 +1,7 @@
 {
  "actions": [],
- "allow_rename": 1,
  "allow_import": 1,
+ "allow_rename": 1,
  "autoname": "format:{vessel}-{order_date}",
  "creation": "2022-06-24 11:27:50.452700",
  "doctype": "DocType",
@@ -43,7 +43,6 @@
    "bold": 1,
    "fieldname": "vessel",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Vessel Name",
    "options": "Vessels",
    "reqd": 1
@@ -51,7 +50,6 @@
   {
    "fieldname": "direction",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Direction",
    "options": "Import\nExport"
   },
@@ -69,8 +67,7 @@
    "fieldname": "customer",
    "fieldtype": "Data",
    "label": "Customer",
-   "options": "Customer",
-   "reqd": 0
+   "options": "Customer"
   },
   {
    "fieldname": "consignee",
@@ -212,7 +209,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-28 12:42:44.016348",
+ "modified": "2023-04-28 18:39:10.122773",
  "modified_by": "Administrator",
  "module": "Freight Management",
  "name": "Direct Shipping",
