@@ -26,17 +26,21 @@ def execute(filters=None):
 
 
 def render_cell(row, column):
-    print(f"fieldname is {fieldname}")
-    print(f"row is {row}")
-    
-    value = cstr(row.get(fieldname))
-    if fieldname == "my_column":
-        if value == "Value A":
-            return f"<div style='color: red;'>{value}</div>"
-        elif value == "Value B":
-            return f"<div style='color: blue;'>{value}</div>"
-    return value
-
+	if column.fieldname == "Status":
+		value = cstr(row.get(column.fieldname))
+		colors = {
+			'Unknown': 'grey',
+			'Scheduled': 'orange',
+			'Overdue Arrival': 'red',
+			'Arrived': 'green',
+			'Unloading': 'blue',
+			'Overdue Departure': 'red',
+			'Delivered': 'darkgrey'
+		}
+		color = colors.get(value, '')
+		if color:
+			return f"<div style='color: {color};'>{value}</div>"
+	return row.get(column.fieldname)
 
 
 def get_columns():
